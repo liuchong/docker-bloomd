@@ -5,9 +5,10 @@ MAINTAINER Liu Chong <mail@clojure.cn>
 ENV BLOOMD_VERSION 0.7.4
 
 RUN apt-get update && \
+    apt-get dist-upgrade -y && \
     apt-get install --no-install-recommends -y \
     build-essential scons && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD https://github.com/armon/bloomd/archive/v${BLOOMD_VERSION}.tar.gz \
     /tmp/bloomd-${BLOOMD_VERSION}.tar.gz
