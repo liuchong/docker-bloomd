@@ -2,7 +2,7 @@ FROM debian:latest
 
 MAINTAINER Liu Chong <mail@clojure.cn>
 
-ENV BLOOMD_VERSION 0.7.4
+ENV BLOOMD_VERSION 0.7.5
 
 RUN apt-get update && \
     apt-get dist-upgrade -y && \
